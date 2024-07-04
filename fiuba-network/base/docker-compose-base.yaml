@@ -6,7 +6,7 @@ services:
   orderer.fiuba.com:
     # ---CHANGED--- The container name is a copy of the orderer name
     container_name: orderer.fiuba.com
-    image: hyperledger/fabric-orderer:2.2.0
+    image: hyperledger/fabric-orderer:2.5.9
     environment:
       - ORDERER_GENERAL_LOGLEVEL=debug
       - ORDERER_GENERAL_LISTENADDRESS=0.0.0.0

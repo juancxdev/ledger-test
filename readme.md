@@ -315,10 +315,12 @@ Creamos el directorio de trabajo /base.
 Para eso creamos primero un volumen
 
       docker volume create portainer_data
-    
+      docker pull portainer/portainer-ce:latest
+
 * Levantamos el contenedor
 
       docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+      docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
     
 * Nos conectamos al localhost:9000 y creamos una cuenta antes de los 3 minutos.
 
