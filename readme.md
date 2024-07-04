@@ -70,7 +70,7 @@ Conceptualmente representan las configuraciones que van a representar la identid
     >         Users:
     >           Count: 1
 
-    [ir a archivo crypto-config.yml](./fiuba-network/crypto-config.yml)
+    [ir a archivo crypto-config.yml](blion-network/crypto-config.yml)
 
 * Ejecutamos en la terminal el comando
 
@@ -120,7 +120,7 @@ Conceptualmente representa las configuraciones que van a determinar, comó se va
     >           Capabilities:
     >               <<: *ApplicationCapabilities
 
-    [ir a archivo configtx.yml](./fiuba-network/configtx.yml)
+    [ir a archivo configtx.yml](blion-network/configtx.yml)
 
 * Ejecutamos los siguientes comandos
 
@@ -218,7 +218,7 @@ Creamos el directorio de trabajo /base.
     >        peer0.org2.fiuba.com:
     >           ...
 
-    [ir a archivo docker-compose-base.yml](./fiuba-network/base/docker-compose-base.yaml)
+    [ir a archivo docker-compose-base.yml](blion-network/base/docker-compose-base.yaml)
 
 ### Orquestamos los contenedores creados y ademas se agregan las bases de datos y servicios CA y CLI
 
@@ -307,7 +307,7 @@ Creamos el directorio de trabajo /base.
     >           couchdb2:
     >               ...
 
-    [ir a archivo docker-compose-cli-couchdb.yaml](./fiuba-network/docker-compose-cli-couchdb.yaml)
+    [ir a archivo docker-compose-cli-couchdb.yaml](blion-network/docker-compose-cli-couchdb.yaml)
 
 ### Levantamos todo
 
@@ -328,7 +328,7 @@ Para eso creamos primero un volumen
 
 * Exportamos las variables de entorno que necesitamos.
 
-      export CHANNEL_NAME=attendance
+      export CHANNEL_NAME=bjaguar
       export VERBOSE=false
       export FABRIC_CFG_PATH=$PWD
     
@@ -344,7 +344,7 @@ Para eso creamos primero un volumen
 
 * Creamos el canal "attendance". Nos conectamos a la consola de comando del contenedor CLI.
 
-      -export CHANNEL_NAME=attendance
+      -export CHANNEL_NAME=bjaguar
       -peer channel create -o orderer.fiuba.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls true --cafile /opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/fiuba.com/orderers/orderer.fiuba.com/msp/tlscacerts/tlsca.fiuba.com-cert.pem 
 
     Se nos tiene que crear el archivo attendance.block
@@ -439,8 +439,8 @@ Ahora nos conectamos al servicio de CLI ejecutamos las siguientes lineas.
 
 * Configuramos las siguientes variables de entorno.
 
-      export CHANNEL_NAME=attendance
-      export CHAINCODE_NAME=foodcontrol
+      export CHANNEL_NAME=bjaguar
+      export CHAINCODE_NAME=bjaguarledger
       export CHAINCODE_VERSION=1
       export CC_RUNTIME_LANGUAGE=golang
       export CC_SRC_PATH="../../../chaincode/$CHAINCODE_NAME"

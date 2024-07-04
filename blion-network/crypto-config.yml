@@ -1,6 +1,6 @@
 OrdererOrgs:
   - Name: Orderer
-    Domain: fiuba.com
+    Domain: blion.com
     EnableNodeOUs: true
     Specs:
       - Hostname: orderer
@@ -9,7 +9,7 @@ OrdererOrgs:
 #Participantes
 PeerOrgs:
   - Name: Org1
-    Domain: org1.fiuba.com
+    Domain: org1.blion.com
     EnableNodeOUs: true
     Template:
       Count: 1 #cant. nodos 
@@ -18,7 +18,7 @@ PeerOrgs:
     Users:
       Count: 1 #cant. usuarios
   - Name: Org2
-    Domain: org2.fiuba.com
+    Domain: org2.blion.com
     EnableNodeOUs: true
     Template:
       Count: 1
@@ -27,7 +27,7 @@ PeerOrgs:
     Users:
       Count: 1
   - Name: Org3
-    Domain: org3.fiuba.com
+    Domain: org3.blion.com
     EnableNodeOUs: true    
     Template:
       Count: 1
