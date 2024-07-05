@@ -1,4 +1,9 @@
 fiuba-network/crypto-config
 fiuba-network/channel-artifacts
+blion-testnet/crypto-config
+blion-testnet/channel-artifacts
 
 chaincode/foodcontrol/go.sum
+/.idea/vcs.xml
+/.idea/hyperledger.iml
+/.idea/modules.xml
